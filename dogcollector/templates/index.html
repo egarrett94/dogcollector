@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+	<div class='doglist'>
+		{% for dog in doggos %}
+		<a href='/{{dog.id}}'>
+			<h3>{{ dog.name }}</h3>
+		</a>
+		<a href="/user/{{dog.user.username}}"
+	      <p>Adopted By: {{dog.user.username }}</p>
+	    </a>
+			<ul>
+				{% if dog.age > 0 %}
+				<li>Age: {{ dog.age }} </li>
+				{% else %}
+				<li>Age: puppo</li>
+				{% endif %}
+
+				<li>Thiccness: {{ dog.thiccness }}</li>
+				<li>Breed: {{ dog.breed }} </li>
+			</ul>
+			<hr />
+		{% endfor  %}
+	</div>
+	<div class='row'>
+		<div class='formblock col s2 offset-s5'>
+			<h3>Add a puppo: </h3>
+			<form action='post_dog/' method='post'>
+				{% csrf_token %}
+				{{ form.as_p }}
+				<input type='submit' value='submit' />
+			</form>
+		</div>
+	</div>
+{% endblock %}

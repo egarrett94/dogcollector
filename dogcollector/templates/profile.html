@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class='formblock'>
+	<h3>{{ username }}'s collection:</h3>
+
+	{% for dog in dogs %}
+	<a href="/{{ dog.id }}">
+	  <h5>{{ dog.name }}</h5>
+	</a>
+
+
+{% endfor %}
+<a href='/'>Go Back Home</a>
+</div>
+{% endblock %}

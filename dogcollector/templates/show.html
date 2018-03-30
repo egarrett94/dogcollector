@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+  <div class='doglist'>
+    <h3>{{ dog.name }}</h3>
+    <h5>Adopted by: <a href='/user/{{dog.user.username}}'>{{dog.user.username}}</a></h5>
+    <p> Breed: {{ dog.breed }}</p>
+    <p> Description: {{ dog.description }}</p>
+    <p> Age: {{ dog.age }}</p>
+
+    <br/>
+
+    <a href='/'>Go Back Home</a>
+  </div>
+
+{% endblock %}

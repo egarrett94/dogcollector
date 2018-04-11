@@ -9,8 +9,20 @@
     <p> Breed: {{ dog.breed }}</p>
     <p> Description: {{ dog.description }}</p>
     <p> Age: {{ dog.age }}</p>
-
     <br/>
+
+    <form action='/{{dog.id}}/toy/create/' method='post'>
+    	{% csrf_token %}
+    	{{ form }}
+    	<input type='submit' class='btn' value='Give Toy'/>
+    </form>
+
+    <br />
+
+    <form action='/{{dog.id}}/delete/' method='post'>
+    	{% csrf_token %}
+    	<input type='submit' class='btn red' value='Delete' />
+    </form>
 
     <a href='/'>Go Back Home</a>
   </div>

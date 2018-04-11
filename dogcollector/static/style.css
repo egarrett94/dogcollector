@@ -29,7 +29,7 @@ a:hover {
 }
 
 .doglist {
-	width: 200px;
+	width: 400px!important;
 	height: auto;
 	margin: 0 auto;
 	background-color: white;

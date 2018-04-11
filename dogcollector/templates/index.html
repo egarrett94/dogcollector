@@ -21,6 +21,13 @@
 				<li>Thiccness: {{ dog.thiccness }}</li>
 				<li>Breed: {{ dog.breed }} </li>
 			</ul>
+			<a class='btn waves-effect waves-light yellow darken-2 likebtn' data-id='{{dog.id}}'>Likes:
+				{% if dog.likes > 0 %}
+				{{ dog.likes }}
+				{% else %}
+				None :(
+				{% endif %}
+			</a>
 			<hr />
 		{% endfor  %}
 	</div>

@@ -1,14 +1,80 @@
-h1 {
-	color: teal;
-	text-shadow: goldenrod 4px 4px 4px;
-}
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower|PT+Sans');
+
+/*font-family: 'Gamja Flower', cursive;*/
+/*font-family: 'PT Sans', sans-serif;*/
 
 body {
-	background-image: url(http://www.commentnation.com/backgrounds/images/gray_pawprints_on_white_background.gif);
+	background-image: url(http://motoki-y.sakura.ne.jp/kabegami/252/b.gif);
 	text-align: center;
+	font-family: 'PT Sans', sans-serif;
 }
 
-footer {
+a {
+	color: #ffee58;
+}
+
+a:hover {
+	color: #fbc02d;
+}
+
+header {
+	background-color: #f06292;
+	padding: 40px;
+}
+
+header h1 {
+	font-family: 'Gamja Flower', cursive;
+	color: white;
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+div.doglist.home {
+	background: transparent;
+}
+
+.individual-dog, .doglist {
+	display: inline-block;
+	background-color: white;
+	border-radius: 20px;
+	width: 250px;
+	height: auto;
+	margin: 15px;
+	padding: 30px;
+}
+
+.helptext {
+	color: lightgrey;
+}
+
+.doglist li {
+	color: lightgrey;
+}
+
+.individual-dog h3, h3, h1 {
+	color: #f06292;
+}
+
+.doglist {
+	width: 80vw;
+	margin: 50px auto;
+	height: auto;
+}
+
+.formblock {
+	background-color: white;
+	border-radius: 20px;
+	margin: 15px;
+	padding: 30px;
+}
+
+.submit-form-button {
+	margin: 20px;
+}
+
+.owned-by {
+	color: #f8bbd0;
+}
+
+/*footer {
 	background-color: gold;
 	display: fixed;
 	bottom: 0;
@@ -38,4 +104,6 @@ a:hover {
 
 .formblock {
 	background-color: white;
-}
+}*/
+
+

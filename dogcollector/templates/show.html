@@ -3,9 +3,9 @@
 
 
 {% block content %}
-  <div class='doglist'>
+  <div class='doglist z-depth-3'>
     <h3>{{ dog.name }}</h3>
-    <h5>Adopted by: <a href='/user/{{dog.user.username}}'>{{dog.user.username}}</a></h5>
+    <h5>Adopted by: <a class='grey-text' href='/user/{{dog.user.username}}'>{{dog.user.username}}</a></h5>
     <p> Breed: {{ dog.breed }}</p>
     <p> Description: {{ dog.description }}</p>
     <p> Age: {{ dog.age }}</p>
@@ -14,17 +14,17 @@
     <form action='/{{dog.id}}/toy/create/' method='post'>
     	{% csrf_token %}
     	{{ form }}
-    	<input type='submit' class='btn' value='Give Toy'/>
+    	<input type='submit' class='btn waves-effect waves-light pink darken-2' value='Give Toy'/>
     </form>
 
     <br />
 
     <form action='/{{dog.id}}/delete/' method='post'>
     	{% csrf_token %}
-    	<input type='submit' class='btn red' value='Delete' />
+    	<input type='submit' class='btn red waves-effect waves-light lighten-1' value='Delete' />
     </form>
 
-    <a href='/'>Go Back Home</a>
+    <a class='grey-text' href='/'>Go Back Home</a>
   </div>
 
 {% endblock %}

@@ -77,7 +77,7 @@ def login_view(request):
 				print('The username and/or password is incorrect.')
 	else: 
 		form = LoginForm()
-		return render(request, 'login.html', { 'form': form } )
+	return render(request, 'login.html', { 'form': form } )
 
 def logout_view(request):
 	logout(request)

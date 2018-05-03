@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<div class='formblock'>
+<div class='doglist z-depth-3'>
 	<h3>{{ username }}'s collection:</h3>
 
 	{% for dog in dogs %}
@@ -13,6 +13,6 @@
 
 
 {% endfor %}
-<a href='/'>Go Back Home</a>
+<a href='/' class='grey-text'>Go Back Home</a>
 </div>
 {% endblock %}

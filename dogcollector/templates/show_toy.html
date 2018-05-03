@@ -3,10 +3,13 @@
 
 
 {% block content %}
+<div class='doglist z-depth-3'>
   <h2> Toy: {{ toy.name }} </h2>
   <p> Dogs: </p>
   <ul>
     {% for dog in dogs %}
     <li> <a href='/{{dog.id}}'>{{dog.name}}></a></li>
     {% endfor %}
+	</ul>
+</div>
 {% endblock %}
